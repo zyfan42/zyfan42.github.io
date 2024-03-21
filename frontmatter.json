@@ -17,18 +17,6 @@
           "type": "string"
         },
         {
-          "title": "Publishing date",
-          "name": "pubDatetime",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
-        },
-        {
-          "title": "Content preview",
-          "name": "preview",
-          "type": "image"
-        },
-        {
           "title": "Is in draft",
           "name": "draft",
           "type": "draft"
@@ -39,23 +27,25 @@
           "type": "tags"
         },
         {
-          "title": "Slug",
-          "name": "slug",
-          "type": "slug",
-          "source": "title"
+          "title": "author",
+          "name": "author",
+          "type": "string"
+        },
+        {
+          "title": "Time",
+          "name": "pubDatetime",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "featured",
+          "name": "featured",
+          "type": "boolean"
         }
+      ]
     }
   ],
   "frontMatter.framework.id": "astro",
-  "frontMatter.preview.host": "http://localhost:4321",
-  "frontMatter.content.pageFolders": [
-    {
-      "path": "[[workspace]]/src/pages",
-      "title": "pages"
-    },
-    {
-      "title": "blog",
-      "path": "[[workspace]]/src/content/blog"
-    }
-  ]
+  "frontMatter.preview.host": "http://localhost:4321"
 }

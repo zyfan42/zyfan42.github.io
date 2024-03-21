@@ -21,8 +21,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
 <Layout>
   <Header />
-  <main id="main-content" class="grid grid-cols-2 gap-8">
-    <section id="hero" class="col-span-2">
+  <main id="main-content">
+    <section id="hero">
       <h1>Welcome 2 zyfan42 Blog!</h1>
       <a
         target="_blank"
@@ -80,7 +80,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
     {
       featuredPosts.length > 0 && (
-        <section id="featured" class="col-span-2">
+        <section id="featured">
           <h2>精选文章</h2>
           <ul>
             {featuredPosts.map(({ data, slug }) => (
@@ -97,7 +97,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
     {
       recentPosts.length > 0 && (
-        <section id="recent-posts" class="col-span-2">
+        <section id="recent-posts">
           <h2>最近的文章</h2>
           <ul>
             {recentPosts.map(
@@ -115,7 +115,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       )
     }
 
-    <div class="all-posts-btn-wrapper col-span-2">
+    <div class="all-posts-btn-wrapper">
       <LinkButton href="/posts/">
         所有文章
         <svg xmlns="http://www.w3.org/2000/svg"
