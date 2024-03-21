@@ -21,9 +21,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
 <Layout>
   <Header />
-  <main id="main-content">
-    <section id="hero">
-      <h1>Mingalaba</h1>
+  <main id="main-content" class="grid grid-cols-2 gap-8">
+    <section id="hero" class="col-span-2">
+      <h1>Welcome 2 zyfan42 Blog!</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -42,25 +42,34 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
-      </p>
-      <p>
-        Read the blog posts or check
+        这是一个使用
         <LinkButton
           className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
+          href="https://astro.build/"
+          >Astro
+        </LinkButton>
+        框架和
+        <LinkButton
+          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+          href="https://pages.github.com/"
+          >GitHub Pages
+        </LinkButton>
+        构建的个人博客网站，欢迎你！
+      </p>
+      <p>
+        阅读博客文章或者查看该网站的
+        <LinkButton
+          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+          href="https://github.com/zyfan42/zyfan42.github.io"
+          >Repo
+        </LinkButton>
+        页面以获取更多信息。
       </p>
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
           <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
+            <div class="social-links">社交媒体链接：</div>
             <Socials />
           </div>
         )
@@ -71,28 +80,25 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
     {
       featuredPosts.length > 0 && (
-        <>
-          <section id="featured">
-            <h2>Featured</h2>
-            <ul>
-              {featuredPosts.map(({ data, slug }) => (
-                <Card
-                  href={`/posts/${slug}/`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
-            </ul>
-          </section>
-          {recentPosts.length > 0 && <Hr />}
-        </>
+        <section id="featured" class="col-span-2">
+          <h2>精选文章</h2>
+          <ul>
+            {featuredPosts.map(({ data, slug }) => (
+              <Card
+                href={`/posts/${slug}/`}
+                frontmatter={data}
+                secHeading={false}
+              />
+            ))}
+          </ul>
+        </section>
       )
     }
 
     {
       recentPosts.length > 0 && (
-        <section id="recent-posts">
-          <h2>Recent Posts</h2>
+        <section id="recent-posts" class="col-span-2">
+          <h2>最近的文章</h2>
           <ul>
             {recentPosts.map(
               ({ data, slug }, index) =>
@@ -109,9 +115,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       )
     }
 
-    <div class="all-posts-btn-wrapper">
+    <div class="all-posts-btn-wrapper col-span-2">
       <LinkButton href="/posts/">
-        All Posts
+        所有文章
         <svg xmlns="http://www.w3.org/2000/svg"
           ><path
             d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
