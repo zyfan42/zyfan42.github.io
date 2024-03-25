@@ -47,5 +47,16 @@
     }
   ],
   "frontMatter.framework.id": "astro",
-  "frontMatter.preview.host": "http://localhost:4321"
+  "frontMatter.preview.host": "http://localhost:4321",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "blog",
+      "path": "[[workspace]]/src/content/blog"
+    }
+  ],
+  "frontMatter.content.publicFolder": {
+    "path": "src/assets",
+    "relative": true
+  },
+  "frontMatter.git.enabled": true
 }
