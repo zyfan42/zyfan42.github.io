@@ -33,3 +33,6 @@ pnpm-debug.log*
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+
+# ignore VS Code workspace
+.code-workspace
