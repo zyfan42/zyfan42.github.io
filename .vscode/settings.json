@@ -1,4 +1,5 @@
 {
     "[markdown]": {
-    }
+    },
+    "workbench.activityBar.iconClickBehavior": "toggle"
 }
